@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Te Gusta el Copy — Tu departamento de marketing, sin el coste de uno</title>
+  <meta name="description" content="Copywriting y estrategia de conversión para PYMES y emprendedores. Simple, sin humo y con foco en resultados." />
+  <meta name="robots" content="index,follow" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--brand:#0f172a;--accent:#f97316}
+    *{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
+    .prose p{margin-bottom:0.9rem}
+    .field:focus{outline:2px solid var(--accent); outline-offset:2px}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-40">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#inicio" class="text-xl font-bold tracking-tight text-slate-900">te gusta el copy</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#servicios" class="hover:text-slate-900">Servicios</a>
+        <a href="#como" class="hover:text-slate-900">Cómo trabajamos</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        <a href="#contacto" class="inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 hover:bg-slate-100">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <div class="prose max-w-none">
+        <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight text-slate-900">
+          Tu departamento de marketing,<br class="hidden sm:block"> sin el coste de uno.
+        </h1>
+        <p class="text-base sm:text-lg text-slate-700">
+          Somos una <strong>agencia de copy y performance</strong> que trabaja con foco en <strong>claridad, orden y retorno</strong>.
+          Menos decoración, más ventas. <em>Una sola página, un mensaje claro, un formulario que convierte.</em>
+        </p>
+        <ul class="list-disc pl-5 text-slate-700">
+          <li>Para negocios sin tiempo de implementar: entregables listos para publicar.</li>
+          <li>Para quienes no saben por dónde comenzar: guía paso a paso y prioridades.</li>
+          <li>Para quienes quieren promocionar sin botar el presupuesto: pruebas, datos y mejoras continuas.</li>
+        </ul>
+        <p class="text-sm text-slate-600">Inspirado en la simplicidad de una sola página efectiva. Más texto que imágenes. Cero humo.</p>
+      </div>
+
+      <!-- Formulario -->
+      <aside id="contacto" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+        <h2 class="text-xl font-semibold mb-2">Cuéntanos de tu proyecto</h2>
+        <p class="text-sm text-slate-600 mb-4">Te respondemos en menos de 24 horas hábiles con próximos pasos claros.</p>
+        <form id="leadForm" class="space-y-4" method="POST" action="https://formsubmit.co/your@email.com">
+          <!-- Reemplaza el action por tu endpoint (Formspree, Google Form o backend propio) -->
+          <div>
+            <label class="block text-sm mb-1" for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="email">Email</label>
+            <input id="email" name="email" type="email" required class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="tu@correo.com" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="whatsapp">WhatsApp (opcional)</label>
+            <input id="whatsapp" name="whatsapp" type="tel" class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="+56 9 1234 5678" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="sitio">Sitio web (opcional)</label>
+            <input id="sitio" name="sitio" type="url" class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="https://tusitio.cl" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1" for="mensaje">¿Qué necesitas?</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="Ej: landing simple para captar leads, revisar anuncios, mejorar textos de ventas…"></textarea>
+          </div>
+          <div class="flex items-start gap-2 text-sm">
+            <input id="consent" type="checkbox" required class="mt-1" />
+            <label for="consent">Acepto ser contactad@ por Te Gusta el Copy. No hacemos spam.</label>
+          </div>
+          <button type="submit" class="w-full rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5">Enviar</button>
+          <p id="formMsg" class="text-sm text-emerald-700 hidden">¡Listo! Recibimos tu mensaje. Te escribiremos muy pronto.</p>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Servicios (texto > imágenes) -->
+  <section id="servicios" class="py-14">
+    <div class="mx-auto max-w-6xl px-4 grid md:grid-cols-3 gap-8">
+      <article class="bg-white border border-slate-200 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg">Landing que convierte</h3>
+        <p class="text-slate-700">Estructura, headlines, beneficios y objeciones resueltas. Una sola página clara para captar datos y validar oferta.</p>
+        <ul class="list-disc pl-5 text-sm text-slate-600 mt-2">
+          <li>Arquitectura de información simple</li>
+          <li>Copy orientado a acción (CTA)</li>
+          <li>Formulario ligero y medible</li>
+        </ul>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg">Anuncios sin desperdicio</h3>
+        <p class="text-slate-700">Mensajes y ofertas para Meta/Google que no dependen de segmentaciones mágicas, sino de claridad y prueba.</p>
+        <ul class="list-disc pl-5 text-sm text-slate-600 mt-2">
+          <li>Hipótesis rápidas por público/problema</li>
+          <li>Pruebas A/B sencillas</li>
+          <li>Aprendizajes accionables</li>
+        </ul>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-2xl p-6">
+        <h3 class="font-semibold text-lg">Mensajes para cerrar ventas</h3>
+        <p class="text-slate-700">Secuencias de email/WhatsApp y guiones de venta cortos. Menos pasos, menos fricción, más cierres.</p>
+        <ul class="list-disc pl-5 text-sm text-slate-600 mt-2">
+          <li>Plantillas para responder objeciones</li>
+          <li>Mensajes de seguimiento</li>
+          <li>Scripts de llamada breves</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Cómo trabajamos -->
+  <section id="como" class="py-14 bg-white border-y border-slate-200">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl font-semibold mb-6">Cómo trabajamos</h2>
+      <ol class="grid md:grid-cols-3 gap-8 text-slate-700">
+        <li class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+          <h3 class="font-semibold">1) Claridad</h3>
+          <p>Definimos producto, público y propuesta de valor en una página. Nada más, nada menos.</p>
+        </li>
+        <li class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+          <h3 class="font-semibold">2) Entregables</h3>
+          <p>Redactamos y estructuramos textos listos para publicar. Si hace falta, maquetamos.</p>
+        </li>
+        <li class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+          <h3 class="font-semibold">3) Medición</h3>
+          <p>Formulario simple, trazabilidad básica y mejoras por aprendizaje. Sin complicarse.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-14">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl font-semibold mb-6">Preguntas frecuentes</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <details class="bg-white border border-slate-200 rounded-2xl p-5" open>
+          <summary class="font-medium cursor-pointer">¿Cuánto se tarda?</summary>
+          <p class="mt-2 text-slate-700">Entre 3 y 7 días hábiles para una landing con formulario y textos. Depende de materiales y feedback.</p>
+        </details>
+        <details class="bg-white border border-slate-200 rounded-2xl p-5">
+          <summary class="font-medium cursor-pointer">¿Necesito imágenes profesionales?</summary>
+          <p class="mt-2 text-slate-700">No. Trabajamos "texto primero". Si tienes imágenes, bien; si no, no es un bloqueo.</p>
+        </details>
+        <details class="bg-white border border-slate-200 rounded-2xl p-5">
+          <summary class="font-medium cursor-pointer">¿Pueden gestionar anuncios?</summary>
+          <p class="mt-2 text-slate-700">Sí. Empezamos con un presupuesto pequeño para aprender rápido y escalar lo que funciona.</p>
+        </details>
+        <details class="bg-white border border-slate-200 rounded-2xl p-5">
+          <summary class="font-medium cursor-pointer">¿Cómo medimos resultados?</summary>
+          <p class="mt-2 text-slate-700">Capturas de lead, tasa de conversión de formulario y costo por lead. Simples y accionables.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="py-14 bg-white">
+    <div class="mx-auto max-w-3xl px-4 text-center">
+      <h2 class="text-2xl font-semibold">Menos ruido. Más claridad. Más ventas.</h2>
+      <p class="text-slate-700 mt-2">Si te gusta este enfoque, conversemos. En una semana puedes tener tu página funcionando.</p>
+      <a href="#contacto" class="inline-block mt-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-3">Quiero empezar</a>
+      <p class="text-xs text-slate-500 mt-3">Síguenos en IG: <a href="https://www.instagram.com/tegustaelcopy/" class="underline" target="_blank" rel="noopener">@tegustaelcopy</a></p>
+    </div>
+  </section>
+
+  <footer class="py-8 border-t border-slate-200 text-center text-sm text-slate-600">
+    <p>© <span id="year"></span> Te Gusta el Copy. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Manejo "optimista" del formulario para maquetas
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', function(e){
+      // Si no tienes backend aún, comenta la siguiente línea para ver el mensaje sin enviar
+      e.preventDefault();
+      msg.classList.remove('hidden');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
