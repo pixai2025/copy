@@ -1,197 +1,195 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Te Gusta el Copy — Tu departamento de marketing, sin el coste de uno</title>
-  <meta name="description" content="Copywriting y estrategia de conversión para PYMES y emprendedores. Simple, sin humo y con foco en resultados." />
-  <meta name="robots" content="index,follow" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Copywriting y estrategia: claridad, orden y resultados. Más texto, menos ruido. Sin humo." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    :root{--brand:#0f172a;--accent:#f97316}
-    *{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"}
-    .prose p{margin-bottom:0.9rem}
-    .field:focus{outline:2px solid var(--accent); outline-offset:2px}
+    /* Ajustes de lectura */
+    .prose p {margin-top: 0.9rem; margin-bottom: 0.9rem;}
+    .prose h2{margin-top:2.5rem;margin-bottom:0.75rem}
+    .prose h3{margin-top:1.75rem;margin-bottom:0.5rem}
+    .hyphens{hyphens:auto}
+    /* Botón focus visible */
+    .btn:focus{outline:2px solid #111827; outline-offset:2px}
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
-  <!-- Header -->
-  <header class="border-b border-slate-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-40">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#inicio" class="text-xl font-bold tracking-tight text-slate-900">te gusta el copy</a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#servicios" class="hover:text-slate-900">Servicios</a>
-        <a href="#como" class="hover:text-slate-900">Cómo trabajamos</a>
-        <a href="#faq" class="hover:text-slate-900">FAQ</a>
-        <a href="#contacto" class="inline-flex items-center rounded-xl border border-slate-300 px-3 py-1.5 hover:bg-slate-100">Contacto</a>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Contenedor -->
+  <header class="border-b border-gray-200 bg-white">
+    <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-tight">Te Gusta el Copy</a>
+      <nav class="text-sm space-x-4">
+        <a href="#servicios" class="hover:underline">Servicios</a>
+        <a href="#proceso" class="hover:underline">Proceso</a>
+        <a href="#pruebas" class="hover:underline">Pruebas</a>
+        <a href="#form" class="px-3 py-1 rounded-md bg-gray-900 text-white btn">Hablemos</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="inicio" class="bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
-      <div class="prose max-w-none">
-        <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight text-slate-900">
-          Tu departamento de marketing,<br class="hidden sm:block"> sin el coste de uno.
-        </h1>
-        <p class="text-base sm:text-lg text-slate-700">
-          Somos una <strong>agencia de copy y performance</strong> que trabaja con foco en <strong>claridad, orden y retorno</strong>.
-          Menos decoración, más ventas. <em>Una sola página, un mensaje claro, un formulario que convierte.</em>
-        </p>
-        <ul class="list-disc pl-5 text-slate-700">
-          <li>Para negocios sin tiempo de implementar: entregables listos para publicar.</li>
-          <li>Para quienes no saben por dónde comenzar: guía paso a paso y prioridades.</li>
-          <li>Para quienes quieren promocionar sin botar el presupuesto: pruebas, datos y mejoras continuas.</li>
-        </ul>
-        <p class="text-sm text-slate-600">Inspirado en la simplicidad de una sola página efectiva. Más texto que imágenes. Cero humo.</p>
+  <!-- Hero minimalista, centrado en texto -->
+  <section id="top" class="max-w-4xl mx-auto px-4 py-16">
+    <div class="prose max-w-none">
+      <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">
+        Tu departamento de marketing,
+        <span class="bg-yellow-200 px-1">sin el coste de uno</span>.
+      </h1>
+      <p class="text-lg text-gray-700 hyphens">No más plantillas genéricas ni campañas sin norte. Ordenamos tu oferta, afinamos tu mensaje y construimos páginas que convierten: <em>más texto, menos ruido</em>. Para dueños de negocio que quieren vender sin perder tiempo ni dinero.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a href="#form" class="btn inline-flex items-center justify-center px-5 py-3 rounded-lg bg-gray-900 text-white">Agenda una llamada</a>
+        <a href="#pruebas" class="inline-flex items-center justify-center px-5 py-3 rounded-lg border border-gray-300">Ver muestras</a>
       </div>
-
-      <!-- Formulario -->
-      <aside id="contacto" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-        <h2 class="text-xl font-semibold mb-2">Cuéntanos de tu proyecto</h2>
-        <p class="text-sm text-slate-600 mb-4">Te respondemos en menos de 24 horas hábiles con próximos pasos claros.</p>
-        <form id="leadForm" class="space-y-4" method="POST" action="https://formsubmit.co/your@email.com">
-          <!-- Reemplaza el action por tu endpoint (Formspree, Google Form o backend propio) -->
-          <div>
-            <label class="block text-sm mb-1" for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" required class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="Tu nombre" />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="email">Email</label>
-            <input id="email" name="email" type="email" required class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="tu@correo.com" />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="whatsapp">WhatsApp (opcional)</label>
-            <input id="whatsapp" name="whatsapp" type="tel" class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="+56 9 1234 5678" />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="sitio">Sitio web (opcional)</label>
-            <input id="sitio" name="sitio" type="url" class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="https://tusitio.cl" />
-          </div>
-          <div>
-            <label class="block text-sm mb-1" for="mensaje">¿Qué necesitas?</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required class="field w-full rounded-xl border border-slate-300 px-3 py-2 bg-white" placeholder="Ej: landing simple para captar leads, revisar anuncios, mejorar textos de ventas…"></textarea>
-          </div>
-          <div class="flex items-start gap-2 text-sm">
-            <input id="consent" type="checkbox" required class="mt-1" />
-            <label for="consent">Acepto ser contactad@ por Te Gusta el Copy. No hacemos spam.</label>
-          </div>
-          <button type="submit" class="w-full rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5">Enviar</button>
-          <p id="formMsg" class="text-sm text-emerald-700 hidden">¡Listo! Recibimos tu mensaje. Te escribiremos muy pronto.</p>
-        </form>
-      </aside>
     </div>
   </section>
 
-  <!-- Servicios (texto > imágenes) -->
-  <section id="servicios" class="py-14">
-    <div class="mx-auto max-w-6xl px-4 grid md:grid-cols-3 gap-8">
-      <article class="bg-white border border-slate-200 rounded-2xl p-6">
-        <h3 class="font-semibold text-lg">Landing que convierte</h3>
-        <p class="text-slate-700">Estructura, headlines, beneficios y objeciones resueltas. Una sola página clara para captar datos y validar oferta.</p>
-        <ul class="list-disc pl-5 text-sm text-slate-600 mt-2">
-          <li>Arquitectura de información simple</li>
-          <li>Copy orientado a acción (CTA)</li>
-          <li>Formulario ligero y medible</li>
-        </ul>
-      </article>
-      <article class="bg-white border border-slate-200 rounded-2xl p-6">
-        <h3 class="font-semibold text-lg">Anuncios sin desperdicio</h3>
-        <p class="text-slate-700">Mensajes y ofertas para Meta/Google que no dependen de segmentaciones mágicas, sino de claridad y prueba.</p>
-        <ul class="list-disc pl-5 text-sm text-slate-600 mt-2">
-          <li>Hipótesis rápidas por público/problema</li>
-          <li>Pruebas A/B sencillas</li>
-          <li>Aprendizajes accionables</li>
-        </ul>
-      </article>
-      <article class="bg-white border border-slate-200 rounded-2xl p-6">
-        <h3 class="font-semibold text-lg">Mensajes para cerrar ventas</h3>
-        <p class="text-slate-700">Secuencias de email/WhatsApp y guiones de venta cortos. Menos pasos, menos fricción, más cierres.</p>
-        <ul class="list-disc pl-5 text-sm text-slate-600 mt-2">
-          <li>Plantillas para responder objeciones</li>
-          <li>Mensajes de seguimiento</li>
-          <li>Scripts de llamada breves</li>
-        </ul>
-      </article>
+  <!-- Sección: Para quién es (texto > imagen) -->
+  <section id="servicios" class="max-w-4xl mx-auto px-4 py-8">
+    <div class="prose max-w-none">
+      <h2 class="text-2xl font-bold">Una agencia para gobernarlos a todos (tu negocio incluido)</h2>
+      <p>Si no tienes tiempo para implementar, no sabes por dónde comenzar o te cansaste de “probar anuncios”, aquí simplificamos: definimos el mensaje, lo llevamos a la web y lo conectamos a un formulario que responde. Minimalista, directo, efectivo.</p>
+
+      <h3 class="font-semibold">Lo que hacemos</h3>
+      <ul class="list-disc pl-6">
+        <li><strong>Landing pages que venden:</strong> estructura clara, jerarquía de mensajes y llamados a la acción que no molestan: convierten.</li>
+        <li><strong>Copywriting persuasivo:</strong> voz directa, tono cotidiano y cero tecnicismos. Lo que dices, se entiende.</li>
+        <li><strong>Ofertas y lead magnets:</strong> propuestas simples que elevan la conversión sin inflar el presupuesto.</li>
+        <li><strong>Mensajería para anuncios:</strong> si corres Meta/Google Ads, tu texto deja de ser “filler” y pasa a ser palanca.</li>
+      </ul>
+
+      <h3 class="font-semibold">Lo que <em>no</em> hacemos</h3>
+      <ul class="list-disc pl-6">
+        <li>Humo, promesas irreales o dependencias innecesarias.</li>
+        <li>Diseños sobrecargados que distraen del objetivo.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Cómo trabajamos -->
-  <section id="como" class="py-14 bg-white border-y border-slate-200">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl font-semibold mb-6">Cómo trabajamos</h2>
-      <ol class="grid md:grid-cols-3 gap-8 text-slate-700">
-        <li class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-          <h3 class="font-semibold">1) Claridad</h3>
-          <p>Definimos producto, público y propuesta de valor en una página. Nada más, nada menos.</p>
-        </li>
-        <li class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-          <h3 class="font-semibold">2) Entregables</h3>
-          <p>Redactamos y estructuramos textos listos para publicar. Si hace falta, maquetamos.</p>
-        </li>
-        <li class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-          <h3 class="font-semibold">3) Medición</h3>
-          <p>Formulario simple, trazabilidad básica y mejoras por aprendizaje. Sin complicarse.</p>
-        </li>
+  <!-- Sección: Propuesta de valor simple -->
+  <section class="max-w-4xl mx-auto px-4 py-8">
+    <div class="prose max-w-none">
+      <h2 class="text-2xl font-bold">Menos fricción, más respuesta</h2>
+      <p>La mayoría de las webs no venden por dos motivos: mensaje confuso y caminos enredados. Nosotros resolvemos ambos con texto claro, navegación mínima y un formulario que pide lo justo.</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-4">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+          <h3 class="font-semibold">Claridad</h3>
+          <p class="text-gray-700">Quitamos paja. Cada palabra trabaja para que el visitante entienda y avance.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+          <h3 class="font-semibold">Orden</h3>
+          <p class="text-gray-700">Estructura lineal: problema → solución → prueba → llamada a la acción.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+          <h3 class="font-semibold">Retorno</h3>
+          <p class="text-gray-700">Texto que vende antes de “diseñar bonito”. Optimizar conversiones primero.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Proceso ligero -->
+  <section id="proceso" class="max-w-4xl mx-auto px-4 py-8">
+    <div class="prose max-w-none">
+      <h2 class="text-2xl font-bold">Cómo trabajamos</h2>
+      <ol class="list-decimal pl-6">
+        <li><strong>Diagnóstico express (30–45 min):</strong> entendemos negocio, oferta y barreras.</li>
+        <li><strong>Borrador de mensajes:</strong> titulares, secciones y CTA. Todo en texto.</li>
+        <li><strong>Landing funcional:</strong> maquetado minimalista + formulario conectado.</li>
+        <li><strong>Ajustes y entrega:</strong> checklist de conversión y guía corta de mejoras.</li>
       </ol>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="py-14">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl font-semibold mb-6">Preguntas frecuentes</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <details class="bg-white border border-slate-200 rounded-2xl p-5" open>
-          <summary class="font-medium cursor-pointer">¿Cuánto se tarda?</summary>
-          <p class="mt-2 text-slate-700">Entre 3 y 7 días hábiles para una landing con formulario y textos. Depende de materiales y feedback.</p>
-        </details>
-        <details class="bg-white border border-slate-200 rounded-2xl p-5">
-          <summary class="font-medium cursor-pointer">¿Necesito imágenes profesionales?</summary>
-          <p class="mt-2 text-slate-700">No. Trabajamos "texto primero". Si tienes imágenes, bien; si no, no es un bloqueo.</p>
-        </details>
-        <details class="bg-white border border-slate-200 rounded-2xl p-5">
-          <summary class="font-medium cursor-pointer">¿Pueden gestionar anuncios?</summary>
-          <p class="mt-2 text-slate-700">Sí. Empezamos con un presupuesto pequeño para aprender rápido y escalar lo que funciona.</p>
-        </details>
-        <details class="bg-white border border-slate-200 rounded-2xl p-5">
-          <summary class="font-medium cursor-pointer">¿Cómo medimos resultados?</summary>
-          <p class="mt-2 text-slate-700">Capturas de lead, tasa de conversión de formulario y costo por lead. Simples y accionables.</p>
-        </details>
-      </div>
+  <!-- Sección: Pruebas sociales / estilo IG (solo texto) -->
+  <section id="pruebas" class="max-w-4xl mx-auto px-4 py-8">
+    <div class="prose max-w-none">
+      <h2 class="text-2xl font-bold">Pruebas y muestras</h2>
+      <p class="text-gray-700">Nuestro estilo viene del día a día persuadiendo en redes: directo, cotidiano, sin vuelta. Si el copy no se entiende, no vende. Punto.</p>
+      <ul class="list-disc pl-6">
+        <li>Micro‑copys que convierten en anuncios.</li>
+        <li>Landing pages con estructura de lectura rápida.</li>
+        <li>Ofertas simples que no requieren explicación.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- CTA final -->
-  <section class="py-14 bg-white">
-    <div class="mx-auto max-w-3xl px-4 text-center">
-      <h2 class="text-2xl font-semibold">Menos ruido. Más claridad. Más ventas.</h2>
-      <p class="text-slate-700 mt-2">Si te gusta este enfoque, conversemos. En una semana puedes tener tu página funcionando.</p>
-      <a href="#contacto" class="inline-block mt-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-3">Quiero empezar</a>
-      <p class="text-xs text-slate-500 mt-3">Síguenos en IG: <a href="https://www.instagram.com/tegustaelcopy/" class="underline" target="_blank" rel="noopener">@tegustaelcopy</a></p>
+  <!-- Formulario simple -->
+  <section id="form" class="max-w-4xl mx-auto px-4 py-12">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+      <h2 class="text-xl font-bold mb-1">Hablemos</h2>
+      <p class="text-gray-700 mb-6">Cuéntanos de tu negocio en 60 segundos. Respondemos en el mismo día.</p>
+
+      <!-- Reemplaza action con tu endpoint (Formspree, Getform, Netlify) -->
+      <form id="contactForm" class="space-y-4" action="https://formspree.io/f/your-id" method="POST">
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-medium">Nombre</label>
+            <input id="name" name="name" required type="text" class="mt-1 w-full rounded-md border-gray-300 focus:ring-0 focus:border-gray-900" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input id="email" name="email" required type="email" class="mt-1 w-full rounded-md border-gray-300 focus:ring-0 focus:border-gray-900" placeholder="tu@correo.com" />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label for="whatsapp" class="block text-sm font-medium">WhatsApp (opcional)</label>
+            <input id="whatsapp" name="whatsapp" type="tel" class="mt-1 w-full rounded-md border-gray-300 focus:ring-0 focus:border-gray-900" placeholder="+56 9 1234 5678" />
+          </div>
+          <div>
+            <label for="origen" class="block text-sm font-medium">¿Cómo nos encontraste?</label>
+            <input id="origen" name="origen" type="text" class="mt-1 w-full rounded-md border-gray-300 focus:ring-0 focus:border-gray-900" placeholder="IG, referidos, búsqueda…" />
+          </div>
+        </div>
+        <div>
+          <label for="mensaje" class="block text-sm font-medium">¿Qué necesitas?</label>
+          <textarea id="mensaje" name="mensaje" required rows="4" class="mt-1 w-full rounded-md border-gray-300 focus:ring-0 focus:border-gray-900" placeholder="Cuéntanos tu oferta y qué te gustaría lograr."></textarea>
+        </div>
+        <button type="submit" class="btn w-full md:w-auto inline-flex items-center justify-center px-5 py-3 rounded-lg bg-gray-900 text-white">Enviar</button>
+        <p id="formMsg" class="text-sm mt-3 hidden"></p>
+      </form>
     </div>
   </section>
 
-  <footer class="py-8 border-t border-slate-200 text-center text-sm text-slate-600">
-    <p>© <span id="year"></span> Te Gusta el Copy. Todos los derechos reservados.</p>
+  <footer class="border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 py-8 text-sm text-gray-600">
+      <p>© <span id="y"></span> Te Gusta el Copy. Más texto, menos ruido.</p>
+    </div>
   </footer>
 
   <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Año automático
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Manejo "optimista" del formulario para maquetas
-    const form = document.getElementById('leadForm');
+    // Envío del formulario con feedback sin recarga (si usas Formspree clásico, puedes quitar este JS)
+    const form = document.getElementById('contactForm');
     const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', function(e){
-      // Si no tienes backend aún, comenta la siguiente línea para ver el mensaje sin enviar
+    form.addEventListener('submit', async (e) => {
+      // Si prefieres envío tradicional, comenta estas 2 líneas
       e.preventDefault();
       msg.classList.remove('hidden');
-      form.reset();
+      msg.textContent = 'Enviando…';
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          msg.textContent = '¡Gracias! Te contactaremos hoy mismo.';
+          msg.classList.remove('text-red-600');
+          msg.classList.add('text-green-600');
+          form.reset();
+        } else {
+          msg.textContent = 'Hubo un problema al enviar. Intenta nuevamente o escríbenos por WhatsApp.';
+          msg.classList.remove('text-green-600');
+          msg.classList.add('text-red-600');
+        }
+      } catch (err) {
+        msg.textContent = 'Error de conexión. Revisa tu internet e intenta otra vez.';
+        msg.classList.remove('text-green-600');
+        msg.classList.add('text-red-600');
+      }
     });
   </script>
 </body>
