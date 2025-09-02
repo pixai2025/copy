@@ -3,197 +3,177 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Te Gusta el Copy — Copy y framework para creadores de contenido</title>
-  <meta name="description" content="Copywriting y framework de comunicación para creadores y marcas en etapa inicial. Claridad, voz propia y páginas que convierten." />
+  <title>Te Gusta el Copy — Para creadores: voz clara, contenido que vende</title>
+  <meta name="description" content="Copy y framework simple para creadores que publican a diario pero no convierten. Claridad, consistencia y páginas que responden." />
 
-  <!-- Tailwind CSS v3 CDN + configuración de tema -->
+  <!-- Tailwind v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#fff7e6',
-              100: '#ffedcc',
-              200: '#ffe0a3',
-              300: '#ffd173',
-              400: '#ffc247',
-              500: '#ffb21a',
-              600: '#d48f0f',
-              700: '#a46d10',
-              800: '#744e12',
-              900: '#4e3613'
-            },
+            brand: { 50:'#fff7e6',100:'#ffedcc',200:'#ffe0a3',300:'#ffd173',400:'#ffc247',500:'#ffb21a',600:'#d48f0f',700:'#a46d10',800:'#744e12',900:'#4e3613' },
             ink: '#111827'
           },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji']
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.06)'
-          }
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Helvetica','Arial','Apple Color Emoji','Segoe UI Emoji'] },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.06)' }
         }
       }
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    .prose p{margin-top:0.9rem;margin-bottom:0.9rem}
-    .prose h2{margin-top:2.5rem;margin-bottom:0.75rem}
-    .prose h3{margin-top:1.5rem;margin-bottom:0.5rem}
-    .shadow-ring{box-shadow:0 0 0 1px rgba(17,24,39,.08),0 10px 30px rgba(0,0,0,.06)}
+    /* Sólo en esta página: evita nav/headers duplicados del tema */
+    body[data-page='tgc-landing'] header:not([data-tgc]){display:none !important}
+    .prose p{margin-top:.9rem;margin-bottom:.9rem}
+    .prose h2{margin-top:2.25rem;margin-bottom:.75rem}
+    .prose h3{margin-top:1.25rem;margin-bottom:.5rem}
+    .shadow-ring{box-shadow:0 0 0 1px rgba(17,24,39,.06),0 10px 30px rgba(0,0,0,.06)}
   </style>
 </head>
-<body class="bg-gradient-to-b from-white to-gray-50 text-ink">
-  <!-- Fondo decorativo -->
+<body class="bg-gradient-to-b from-white to-gray-50 text-ink" data-page="tgc-landing">
+  <!-- Fondo decorativo sutil -->
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
     <div class="absolute left-1/2 top-[-6rem] -translate-x-1/2 h-72 w-[80vw] rounded-full bg-brand-100 blur-3xl opacity-60"></div>
   </div>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-gray-200/70 bg-white/80 backdrop-blur">
+  <!-- Header (único) -->
+  <header data-tgc class="sticky top-0 z-40 border-b border-gray-200/70 bg-white/85 backdrop-blur">
     <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="#top" class="font-extrabold tracking-tight text-lg">Te Gusta el Copy</a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#framework" class="hover:text-ink/80">Framework</a>
-        <a href="#servicios" class="hover:text-ink/80">Servicios</a>
-        <a href="#proceso" class="hover:text-ink/80">Proceso</a>
-        <a href="#pruebas" class="hover:text-ink/80">Muestras</a>
-        <a href="https://www.instagram.com/tegustaelcopy/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:underline" aria-label="Instagram Te Gusta el Copy">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 2a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 9Zm5.5-2a1 1 0 1 1 0 2 1 0 0 1 0-2Z"/></svg>
-          IG
-        </a>
-        <a href="#form" class="px-4 py-2 rounded-lg bg-ink text-white hover:opacity-90 transition">Hablemos</a>
+        <a href="#dolores" class="hover:text-ink/80">¿Te pasa esto?</a>
+        <a href="#framework" class="hover:text-ink/80">Cómo lo resolvemos</a>
+        <a href="#muestras" class="hover:text-ink/80">Muestras</a>
+        <a href="#form" class="px-4 py-2 rounded-lg bg-ink text-white hover:opacity-90 transition">Quiero mi framework</a>
       </nav>
-      <a href="#form" class="md:hidden px-3 py-2 rounded-md bg-ink text-white">Hablemos</a>
+      <a href="#form" class="md:hidden px-3 py-2 rounded-md bg-ink text-white">Empezar</a>
     </div>
   </header>
 
-  <!-- Hero orientado a creadores -->
+  <!-- HERO: menos tecnicismo, más empatía + SVG inline (sin dependencias externas) -->
   <section id="top" class="max-w-5xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-12 gap-8 items-center">
+    <div class="grid md:grid-cols-12 gap-10 items-center">
       <div class="md:col-span-7">
         <div class="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-ink/80 mb-4">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
-          Para creadores y marcas en etapa inicial
+          Creadores, marcas personales y proyectos que recién despegan
         </div>
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          Copy y framework
-          <span class="bg-gradient-to-r from-brand-200 to-brand-100 px-2 rounded">para hablar como marca</span>
-          (y vender como tal).
+          Habla como marca.
+          <span class="bg-gradient-to-r from-brand-200 to-brand-100 px-2 rounded">Vende sin gritar</span>.
         </h1>
-        <p class="mt-4 text-lg text-ink/80 max-w-2xl">¿Tienes (o estás empezando) una marca personal? Te damos voz, estructura y páginas que convierten: hooks, guiones, captions y un sistema simple para publicar sin perderte.</p>
+        <p class="mt-4 text-lg text-ink/80 max-w-2xl">Publicas, pero no pasa nada. No es falta de ganas: es falta de <strong>voz clara</strong> y <strong>estructura</strong>. Te damos un framework simple para saber qué decir, cómo decirlo y dónde decirlo.</p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#form" class="group inline-flex items-center justify-center px-5 py-3 rounded-xl bg-ink text-white shadow-soft transition hover:-translate-y-0.5">
-            Quiero mi framework
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ml-2 h-4 w-4 transition group-hover:translate-x-0.5" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg>
-          </a>
-          <a href="#pruebas" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-ink/15 bg-white hover:border-ink/25">Ver muestras</a>
+          <a href="#form" class="group inline-flex items-center justify-center px-5 py-3 rounded-xl bg-ink text-white shadow-soft transition hover:-translate-y-0.5">Quiero mi framework<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ml-2 h-4 w-4 transition group-hover:translate-x-0.5" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg></a>
+          <a href="#muestras" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-ink/15 bg-white hover:border-ink/25">Ver muestras</a>
         </div>
       </div>
-      <!-- Imagen hero: proto-influencer con celular -->
       <div class="md:col-span-5">
-        <figure class="rounded-3xl overflow-hidden border border-ink/10 shadow-soft bg-white">
-          <img
-            src="https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=1600&auto=format&fit=crop"
-            srcset="https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=800 800w, https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=1200 1200w, https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=1600 1600w"
-            sizes="(max-width: 768px) 100vw, 480px"
-            alt="Creador de contenidos frente al celular preparando un video"
-            class="w-full h-full object-cover aspect-[4/5]"
-            loading="eager"
-          />
-          <figcaption class="sr-only">Persona tipo proto‑influencer preparando contenido con su teléfono</figcaption>
+        <!-- Ilustración SVG inline (no se rompe por CORS ni bloqueadores) -->
+        <figure class="rounded-3xl overflow-hidden border border-ink/10 shadow-soft bg-white p-6">
+          <svg viewBox="0 0 320 400" class="w-full h-auto" role="img" aria-labelledby="heroTitle heroDesc">
+            <title id="heroTitle">Creador frente al celular</title>
+            <desc id="heroDesc">Persona sosteniendo un teléfono, preparando contenido para redes</desc>
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#ffe0a3"/>
+                <stop offset="1" stop-color="#ffd173"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset="1" stop-color="#f3f4f6"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="320" height="400" fill="url(#g2)"/>
+            <circle cx="260" cy="70" r="28" fill="url(#g1)"/>
+            <rect x="40" y="110" width="240" height="220" rx="24" fill="#fff" stroke="#e5e7eb"/>
+            <!-- Persona -->
+            <circle cx="160" cy="150" r="36" fill="#111827" opacity=".9"/>
+            <rect x="100" y="190" width="120" height="90" rx="22" fill="#111827" opacity=".9"/>
+            <!-- Celular -->
+            <rect x="190" y="150" width="22" height="44" rx="6" fill="#111827"/>
+            <rect x="192" y="152" width="18" height="40" rx="4" fill="#fff"/>
+            <!-- Detalles -->
+            <rect x="52" y="260" width="216" height="12" rx="6" fill="#e5e7eb"/>
+            <rect x="90" y="282" width="140" height="10" rx="5" fill="#e5e7eb"/>
+          </svg>
+          <figcaption class="sr-only">Ilustración minimal de un creador con su teléfono</figcaption>
         </figure>
-        <p class="mt-2 text-xs text-ink/60">Imagen referencial — podemos reemplazarla por foto de marca o una variante con tu estilo.</p>
       </div>
     </div>
   </section>
 
-  <!-- Framework de voz y contenido -->
+  <!-- DOLORES: Apunta directo a los problemas reales -->
+  <section id="dolores" class="max-w-5xl mx-auto px-4 py-4">
+    <div class="rounded-3xl border border-ink/10 bg-white p-8 md:p-10 shadow-soft">
+      <h2 class="text-2xl md:text-3xl font-bold">¿Te pasa esto?</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6 text-ink/90">
+        <ul class="space-y-3">
+          <li>Publicas seguido, <strong>pero nadie entiende</strong> por qué deberían comprarte.</li>
+          <li>Tienes ideas, <strong>pero te bloqueas</strong> al escribir captions o guiones.</li>
+          <li>Los Reels tienen vistas, <strong>pero pocos te escriben</strong> o hacen clic.</li>
+          <li>Tu bio y tu oferta <strong>cambian cada semana</strong>. No hay consistencia.</li>
+        </ul>
+        <ul class="space-y-3">
+          <li><strong>No sabes qué decir</strong> sin sonar repetitivo o vendedor desesperado.</li>
+          <li><strong>Saltas de tendencia en tendencia</strong> y tu mensaje se diluye.</li>
+          <li>Tienes una landing, <strong>pero no convierte</strong> (o ni siquiera tienes una).</li>
+          <li>Te cuesta <strong>pedir la acción</strong> (DM, link, agendar) sin incomodar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK: Respuesta simple, sin tecnicismos -->
   <section id="framework" class="max-w-5xl mx-auto px-4 py-12">
-    <div class="rounded-3xl border border-ink/10 bg-white p-8 md:p-10 shadow-soft">
-      <div class="prose max-w-none">
-        <h2 class="text-2xl md:text-3xl font-bold">Tu Framework de Comunicación (listo en días, no meses)</h2>
-        <p>Un sistema práctico para creadores que necesitan publicar y vender sin improvisar. Entregables listos para usar en IG/TikTok/YouTube y tu landing.</p>
-      </div>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-ink/10 p-6 bg-gradient-to-b from-white to-gray-50">
-          <h3 class="font-semibold">Voz y Tono</h3>
-          <ul class="mt-2 space-y-2 text-ink/80 text-sm">
-            <li>Arquetipo y principios de marca</li>
-            <li>Mensajes base y bio (IG/LinkedIn)</li>
-            <li>Do/Don't y glosario propio</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-ink/10 p-6 bg-gradient-to-b from-white to-gray-50">
-          <h3 class="font-semibold">Sistema de Contenidos</h3>
-          <ul class="mt-2 space-y-2 text-ink/80 text-sm">
-            <li>Hooks, CTAs y prompts</li>
-            <li>Guiones short‑form (15–45s)</li>
-            <li>Calendario 30 días (3 pilares)</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-ink/10 p-6 bg-gradient-to-b from-white to-gray-50">
-          <h3 class="font-semibold">Conversión</h3>
-          <ul class="mt-2 space-y-2 text-ink/80 text-sm">
-            <li>Landing link‑in‑bio</li>
-            <li>Lead magnet sencillo</li>
-            <li>Form simple + automatización</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="max-w-5xl mx-auto px-4 py-12">
     <div class="prose max-w-none">
-      <h2 class="text-2xl md:text-3xl font-bold">Servicios para creadores</h2>
+      <h2 class="text-2xl md:text-3xl font-bold">Cómo lo resolvemos (sin palabras raras)</h2>
     </div>
-    <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <div class="rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
-        <h3 class="font-semibold">Starter: Voz + 15 piezas</h3>
-        <p class="text-ink/80">Voz y tono, 10 hooks, 5 guiones, bio y CTA library. Ideal para comenzar a publicar ya.</p>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-ink/10 p-6 bg-white shadow-soft">
+        <h3 class="font-semibold">1) Tu voz</h3>
+        <p class="text-ink/80">Definimos cómo hablas: qué dices y qué no. Queda por escrito para que no improvises más.</p>
       </div>
-      <div class="rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
-        <h3 class="font-semibold">Pro: Framework completo</h3>
-        <p class="text-ink/80">Todo el Starter + calendario 30 días, landing link‑in‑bio y lead magnet.</p>
+      <div class="rounded-2xl border border-ink/10 p-6 bg-white shadow-soft">
+        <h3 class="font-semibold">2) Tus contenidos</h3>
+        <p class="text-ink/80">Te entrego hooks, guiones cortos y ejemplos de captions para 30 días. Listos para grabar/publicar.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-6 bg-white shadow-soft">
+        <h3 class="font-semibold">3) Tu página</h3>
+        <p class="text-ink/80">Una landing clara (link‑in‑bio) con formulario corto para que la gente <strong>haga algo</strong>.</p>
       </div>
     </div>
   </section>
 
-  <!-- Muestras / estilo IG (texto) -->
-  <section id="pruebas" class="max-w-5xl mx-auto px-4 py-12">
+  <!-- MUESTRAS -->
+  <section id="muestras" class="max-w-5xl mx-auto px-4 py-12">
     <div class="rounded-3xl border border-ink/10 bg-white p-8 md:p-10 shadow-soft">
-      <div class="prose max-w-none">
-        <h2 class="text-2xl md:text-3xl font-bold">Muestras</h2>
-        <p class="text-ink/80">Algunos ejemplos del tipo de copy que entregamos. Claro, directo y listo para publicar.</p>
-      </div>
+      <h2 class="text-2xl md:text-3xl font-bold">Muestras</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm text-ink/90">
         <div class="rounded-xl border border-ink/10 p-4 bg-gray-50">
-          <p class="font-semibold">Hook (Problema)</p>
-          <p class="mt-2">“Publicas todos los días, pero nadie entiende por qué deberían comprarte.”</p>
-          <p class="mt-2 text-ink/70">CTA: “Escríbeme ‘VOZ’ y te envío el framework base.”</p>
+          <p class="font-semibold">Hook</p>
+          <p class="mt-2">“Si hoy dejara de publicar, mi negocio no se mueve. ¿Te suena? Hablemos de sistema.”</p>
         </div>
         <div class="rounded-xl border border-ink/10 p-4 bg-gray-50">
           <p class="font-semibold">Guion 30s</p>
-          <p class="mt-2">Gancho → Problema → Micro‑prueba → CTA. Estructura que retiene y convierte.</p>
+          <p class="mt-2">Gancho → Problema → Mini prueba → Acción. Sin rodeos.</p>
         </div>
         <div class="rounded-xl border border-ink/10 p-4 bg-gray-50">
-          <p class="font-semibold">Landing link‑in‑bio</p>
-          <p class="mt-2">Titular claro, oferta simple, formulario corto. Menos scroll, más respuesta.</p>
+          <p class="font-semibold">Landing</p>
+          <p class="mt-2">Titular claro, oferta simple y un botón. Lo demás estorba.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Formulario -->
+  <!-- FORMULARIO -->
   <section id="form" class="max-w-5xl mx-auto px-4 py-16">
     <div class="grid md:grid-cols-5 gap-8 items-start">
       <div class="md:col-span-3">
         <h2 class="text-2xl md:text-3xl font-bold">Cuéntame de tu marca</h2>
-        <p class="text-ink/80 mt-2">En 60 segundos te doy el siguiente paso. Respuesta el mismo día.</p>
+        <p class="text-ink/80 mt-2">En 60 segundos te digo el siguiente paso. Respondo hoy.</p>
         <form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
           <div class="grid md:grid-cols-2 gap-4">
             <div>
@@ -226,11 +206,8 @@
       <aside class="md:col-span-2">
         <div class="rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
           <p class="text-sm text-ink/60">¿Prefieres DM?</p>
-          <a href="https://www.instagram.com/tegustaelcopy/" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 text-ink underline decoration-brand-400 decoration-2 underline-offset-4 hover:text-ink/80">
-            Escríbeme por Instagram
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg>
-          </a>
-          <p class="mt-3 text-sm text-ink/70">Respondo rápido y con un paso a paso accionable.</p>
+          <a href="https://www.instagram.com/tegustaelcopy/" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 text-ink underline decoration-brand-400 decoration-2 underline-offset-4 hover:text-ink/80">Escríbeme por Instagram<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg></a>
+          <p class="mt-3 text-sm text-ink/70">Respondo con un paso a paso accionable.</p>
         </div>
       </aside>
     </div>
@@ -252,7 +229,7 @@
     // Envío con feedback
     const form = document.getElementById('contactForm');
     const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', async (e) => {
+    form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       msg.classList.remove('hidden');
       msg.textContent = 'Enviando…';
@@ -283,197 +260,177 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Te Gusta el Copy — Copy y framework para creadores de contenido</title>
-  <meta name="description" content="Copywriting y framework de comunicación para creadores y marcas en etapa inicial. Claridad, voz propia y páginas que convierten." />
+  <title>Te Gusta el Copy — Para creadores: voz clara, contenido que vende</title>
+  <meta name="description" content="Copy y framework simple para creadores que publican a diario pero no convierten. Claridad, consistencia y páginas que responden." />
 
-  <!-- Tailwind CSS v3 CDN + configuración de tema -->
+  <!-- Tailwind v3 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              50: '#fff7e6',
-              100: '#ffedcc',
-              200: '#ffe0a3',
-              300: '#ffd173',
-              400: '#ffc247',
-              500: '#ffb21a',
-              600: '#d48f0f',
-              700: '#a46d10',
-              800: '#744e12',
-              900: '#4e3613'
-            },
+            brand: { 50:'#fff7e6',100:'#ffedcc',200:'#ffe0a3',300:'#ffd173',400:'#ffc247',500:'#ffb21a',600:'#d48f0f',700:'#a46d10',800:'#744e12',900:'#4e3613' },
             ink: '#111827'
           },
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji']
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.06)'
-          }
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Helvetica','Arial','Apple Color Emoji','Segoe UI Emoji'] },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.06)' }
         }
       }
     }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    .prose p{margin-top:0.9rem;margin-bottom:0.9rem}
-    .prose h2{margin-top:2.5rem;margin-bottom:0.75rem}
-    .prose h3{margin-top:1.5rem;margin-bottom:0.5rem}
-    .shadow-ring{box-shadow:0 0 0 1px rgba(17,24,39,.08),0 10px 30px rgba(0,0,0,.06)}
+    /* Sólo en esta página: evita nav/headers duplicados del tema */
+    body[data-page='tgc-landing'] header:not([data-tgc]){display:none !important}
+    .prose p{margin-top:.9rem;margin-bottom:.9rem}
+    .prose h2{margin-top:2.25rem;margin-bottom:.75rem}
+    .prose h3{margin-top:1.25rem;margin-bottom:.5rem}
+    .shadow-ring{box-shadow:0 0 0 1px rgba(17,24,39,.06),0 10px 30px rgba(0,0,0,.06)}
   </style>
 </head>
-<body class="bg-gradient-to-b from-white to-gray-50 text-ink">
-  <!-- Fondo decorativo -->
+<body class="bg-gradient-to-b from-white to-gray-50 text-ink" data-page="tgc-landing">
+  <!-- Fondo decorativo sutil -->
   <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
     <div class="absolute left-1/2 top-[-6rem] -translate-x-1/2 h-72 w-[80vw] rounded-full bg-brand-100 blur-3xl opacity-60"></div>
   </div>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-40 border-b border-gray-200/70 bg-white/80 backdrop-blur">
+  <!-- Header (único) -->
+  <header data-tgc class="sticky top-0 z-40 border-b border-gray-200/70 bg-white/85 backdrop-blur">
     <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
       <a href="#top" class="font-extrabold tracking-tight text-lg">Te Gusta el Copy</a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#framework" class="hover:text-ink/80">Framework</a>
-        <a href="#servicios" class="hover:text-ink/80">Servicios</a>
-        <a href="#proceso" class="hover:text-ink/80">Proceso</a>
-        <a href="#pruebas" class="hover:text-ink/80">Muestras</a>
-        <a href="https://www.instagram.com/tegustaelcopy/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:underline" aria-label="Instagram Te Gusta el Copy">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 3a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 2a4 4 0 1 0 .001 8.001A4 4 0 0 0 12 9Zm5.5-2a1 1 0 1 1 0 2 1 0 0 1 0-2Z"/></svg>
-          IG
-        </a>
-        <a href="#form" class="px-4 py-2 rounded-lg bg-ink text-white hover:opacity-90 transition">Hablemos</a>
+        <a href="#dolores" class="hover:text-ink/80">¿Te pasa esto?</a>
+        <a href="#framework" class="hover:text-ink/80">Cómo lo resolvemos</a>
+        <a href="#muestras" class="hover:text-ink/80">Muestras</a>
+        <a href="#form" class="px-4 py-2 rounded-lg bg-ink text-white hover:opacity-90 transition">Quiero mi framework</a>
       </nav>
-      <a href="#form" class="md:hidden px-3 py-2 rounded-md bg-ink text-white">Hablemos</a>
+      <a href="#form" class="md:hidden px-3 py-2 rounded-md bg-ink text-white">Empezar</a>
     </div>
   </header>
 
-  <!-- Hero orientado a creadores -->
+  <!-- HERO: menos tecnicismo, más empatía + SVG inline (sin dependencias externas) -->
   <section id="top" class="max-w-5xl mx-auto px-4 py-16">
-    <div class="grid md:grid-cols-12 gap-8 items-center">
+    <div class="grid md:grid-cols-12 gap-10 items-center">
       <div class="md:col-span-7">
         <div class="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-ink/80 mb-4">
           <span class="h-1.5 w-1.5 rounded-full bg-brand-500"></span>
-          Para creadores y marcas en etapa inicial
+          Creadores, marcas personales y proyectos que recién despegan
         </div>
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-          Copy y framework
-          <span class="bg-gradient-to-r from-brand-200 to-brand-100 px-2 rounded">para hablar como marca</span>
-          (y vender como tal).
+          Habla como marca.
+          <span class="bg-gradient-to-r from-brand-200 to-brand-100 px-2 rounded">Vende sin gritar</span>.
         </h1>
-        <p class="mt-4 text-lg text-ink/80 max-w-2xl">¿Tienes (o estás empezando) una marca personal? Te damos voz, estructura y páginas que convierten: hooks, guiones, captions y un sistema simple para publicar sin perderte.</p>
+        <p class="mt-4 text-lg text-ink/80 max-w-2xl">Publicas, pero no pasa nada. No es falta de ganas: es falta de <strong>voz clara</strong> y <strong>estructura</strong>. Te damos un framework simple para saber qué decir, cómo decirlo y dónde decirlo.</p>
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="#form" class="group inline-flex items-center justify-center px-5 py-3 rounded-xl bg-ink text-white shadow-soft transition hover:-translate-y-0.5">
-            Quiero mi framework
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ml-2 h-4 w-4 transition group-hover:translate-x-0.5" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg>
-          </a>
-          <a href="#pruebas" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-ink/15 bg-white hover:border-ink/25">Ver muestras</a>
+          <a href="#form" class="group inline-flex items-center justify-center px-5 py-3 rounded-xl bg-ink text-white shadow-soft transition hover:-translate-y-0.5">Quiero mi framework<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ml-2 h-4 w-4 transition group-hover:translate-x-0.5" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg></a>
+          <a href="#muestras" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-ink/15 bg-white hover:border-ink/25">Ver muestras</a>
         </div>
       </div>
-      <!-- Imagen hero: proto-influencer con celular -->
       <div class="md:col-span-5">
-        <figure class="rounded-3xl overflow-hidden border border-ink/10 shadow-soft bg-white">
-          <img
-            src="https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=1600&auto=format&fit=crop"
-            srcset="https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=800 800w, https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=1200 1200w, https://images.unsplash.com/photo-1559066658-c95b01ea6d80?q=80&w=1600 1600w"
-            sizes="(max-width: 768px) 100vw, 480px"
-            alt="Creador de contenidos frente al celular preparando un video"
-            class="w-full h-full object-cover aspect-[4/5]"
-            loading="eager"
-          />
-          <figcaption class="sr-only">Persona tipo proto‑influencer preparando contenido con su teléfono</figcaption>
+        <!-- Ilustración SVG inline (no se rompe por CORS ni bloqueadores) -->
+        <figure class="rounded-3xl overflow-hidden border border-ink/10 shadow-soft bg-white p-6">
+          <svg viewBox="0 0 320 400" class="w-full h-auto" role="img" aria-labelledby="heroTitle heroDesc">
+            <title id="heroTitle">Creador frente al celular</title>
+            <desc id="heroDesc">Persona sosteniendo un teléfono, preparando contenido para redes</desc>
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#ffe0a3"/>
+                <stop offset="1" stop-color="#ffd173"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stop-color="#fff"/>
+                <stop offset="1" stop-color="#f3f4f6"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="320" height="400" fill="url(#g2)"/>
+            <circle cx="260" cy="70" r="28" fill="url(#g1)"/>
+            <rect x="40" y="110" width="240" height="220" rx="24" fill="#fff" stroke="#e5e7eb"/>
+            <!-- Persona -->
+            <circle cx="160" cy="150" r="36" fill="#111827" opacity=".9"/>
+            <rect x="100" y="190" width="120" height="90" rx="22" fill="#111827" opacity=".9"/>
+            <!-- Celular -->
+            <rect x="190" y="150" width="22" height="44" rx="6" fill="#111827"/>
+            <rect x="192" y="152" width="18" height="40" rx="4" fill="#fff"/>
+            <!-- Detalles -->
+            <rect x="52" y="260" width="216" height="12" rx="6" fill="#e5e7eb"/>
+            <rect x="90" y="282" width="140" height="10" rx="5" fill="#e5e7eb"/>
+          </svg>
+          <figcaption class="sr-only">Ilustración minimal de un creador con su teléfono</figcaption>
         </figure>
-        <p class="mt-2 text-xs text-ink/60">Imagen referencial — podemos reemplazarla por foto de marca o una variante con tu estilo.</p>
       </div>
     </div>
   </section>
 
-  <!-- Framework de voz y contenido -->
+  <!-- DOLORES: Apunta directo a los problemas reales -->
+  <section id="dolores" class="max-w-5xl mx-auto px-4 py-4">
+    <div class="rounded-3xl border border-ink/10 bg-white p-8 md:p-10 shadow-soft">
+      <h2 class="text-2xl md:text-3xl font-bold">¿Te pasa esto?</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6 text-ink/90">
+        <ul class="space-y-3">
+          <li>Publicas seguido, <strong>pero nadie entiende</strong> por qué deberían comprarte.</li>
+          <li>Tienes ideas, <strong>pero te bloqueas</strong> al escribir captions o guiones.</li>
+          <li>Los Reels tienen vistas, <strong>pero pocos te escriben</strong> o hacen clic.</li>
+          <li>Tu bio y tu oferta <strong>cambian cada semana</strong>. No hay consistencia.</li>
+        </ul>
+        <ul class="space-y-3">
+          <li><strong>No sabes qué decir</strong> sin sonar repetitivo o vendedor desesperado.</li>
+          <li><strong>Saltas de tendencia en tendencia</strong> y tu mensaje se diluye.</li>
+          <li>Tienes una landing, <strong>pero no convierte</strong> (o ni siquiera tienes una).</li>
+          <li>Te cuesta <strong>pedir la acción</strong> (DM, link, agendar) sin incomodar.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRAMEWORK: Respuesta simple, sin tecnicismos -->
   <section id="framework" class="max-w-5xl mx-auto px-4 py-12">
-    <div class="rounded-3xl border border-ink/10 bg-white p-8 md:p-10 shadow-soft">
-      <div class="prose max-w-none">
-        <h2 class="text-2xl md:text-3xl font-bold">Tu Framework de Comunicación (listo en días, no meses)</h2>
-        <p>Un sistema práctico para creadores que necesitan publicar y vender sin improvisar. Entregables listos para usar en IG/TikTok/YouTube y tu landing.</p>
-      </div>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-ink/10 p-6 bg-gradient-to-b from-white to-gray-50">
-          <h3 class="font-semibold">Voz y Tono</h3>
-          <ul class="mt-2 space-y-2 text-ink/80 text-sm">
-            <li>Arquetipo y principios de marca</li>
-            <li>Mensajes base y bio (IG/LinkedIn)</li>
-            <li>Do/Don't y glosario propio</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-ink/10 p-6 bg-gradient-to-b from-white to-gray-50">
-          <h3 class="font-semibold">Sistema de Contenidos</h3>
-          <ul class="mt-2 space-y-2 text-ink/80 text-sm">
-            <li>Hooks, CTAs y prompts</li>
-            <li>Guiones short‑form (15–45s)</li>
-            <li>Calendario 30 días (3 pilares)</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-ink/10 p-6 bg-gradient-to-b from-white to-gray-50">
-          <h3 class="font-semibold">Conversión</h3>
-          <ul class="mt-2 space-y-2 text-ink/80 text-sm">
-            <li>Landing link‑in‑bio</li>
-            <li>Lead magnet sencillo</li>
-            <li>Form simple + automatización</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="max-w-5xl mx-auto px-4 py-12">
     <div class="prose max-w-none">
-      <h2 class="text-2xl md:text-3xl font-bold">Servicios para creadores</h2>
+      <h2 class="text-2xl md:text-3xl font-bold">Cómo lo resolvemos (sin palabras raras)</h2>
     </div>
-    <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <div class="rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
-        <h3 class="font-semibold">Starter: Voz + 15 piezas</h3>
-        <p class="text-ink/80">Voz y tono, 10 hooks, 5 guiones, bio y CTA library. Ideal para comenzar a publicar ya.</p>
+    <div class="mt-6 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-ink/10 p-6 bg-white shadow-soft">
+        <h3 class="font-semibold">1) Tu voz</h3>
+        <p class="text-ink/80">Definimos cómo hablas: qué dices y qué no. Queda por escrito para que no improvises más.</p>
       </div>
-      <div class="rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
-        <h3 class="font-semibold">Pro: Framework completo</h3>
-        <p class="text-ink/80">Todo el Starter + calendario 30 días, landing link‑in‑bio y lead magnet.</p>
+      <div class="rounded-2xl border border-ink/10 p-6 bg-white shadow-soft">
+        <h3 class="font-semibold">2) Tus contenidos</h3>
+        <p class="text-ink/80">Te entrego hooks, guiones cortos y ejemplos de captions para 30 días. Listos para grabar/publicar.</p>
+      </div>
+      <div class="rounded-2xl border border-ink/10 p-6 bg-white shadow-soft">
+        <h3 class="font-semibold">3) Tu página</h3>
+        <p class="text-ink/80">Una landing clara (link‑in‑bio) con formulario corto para que la gente <strong>haga algo</strong>.</p>
       </div>
     </div>
   </section>
 
-  <!-- Muestras / estilo IG (texto) -->
-  <section id="pruebas" class="max-w-5xl mx-auto px-4 py-12">
+  <!-- MUESTRAS -->
+  <section id="muestras" class="max-w-5xl mx-auto px-4 py-12">
     <div class="rounded-3xl border border-ink/10 bg-white p-8 md:p-10 shadow-soft">
-      <div class="prose max-w-none">
-        <h2 class="text-2xl md:text-3xl font-bold">Muestras</h2>
-        <p class="text-ink/80">Algunos ejemplos del tipo de copy que entregamos. Claro, directo y listo para publicar.</p>
-      </div>
+      <h2 class="text-2xl md:text-3xl font-bold">Muestras</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm text-ink/90">
         <div class="rounded-xl border border-ink/10 p-4 bg-gray-50">
-          <p class="font-semibold">Hook (Problema)</p>
-          <p class="mt-2">“Publicas todos los días, pero nadie entiende por qué deberían comprarte.”</p>
-          <p class="mt-2 text-ink/70">CTA: “Escríbeme ‘VOZ’ y te envío el framework base.”</p>
+          <p class="font-semibold">Hook</p>
+          <p class="mt-2">“Si hoy dejara de publicar, mi negocio no se mueve. ¿Te suena? Hablemos de sistema.”</p>
         </div>
         <div class="rounded-xl border border-ink/10 p-4 bg-gray-50">
           <p class="font-semibold">Guion 30s</p>
-          <p class="mt-2">Gancho → Problema → Micro‑prueba → CTA. Estructura que retiene y convierte.</p>
+          <p class="mt-2">Gancho → Problema → Mini prueba → Acción. Sin rodeos.</p>
         </div>
         <div class="rounded-xl border border-ink/10 p-4 bg-gray-50">
-          <p class="font-semibold">Landing link‑in‑bio</p>
-          <p class="mt-2">Titular claro, oferta simple, formulario corto. Menos scroll, más respuesta.</p>
+          <p class="font-semibold">Landing</p>
+          <p class="mt-2">Titular claro, oferta simple y un botón. Lo demás estorba.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Formulario -->
+  <!-- FORMULARIO -->
   <section id="form" class="max-w-5xl mx-auto px-4 py-16">
     <div class="grid md:grid-cols-5 gap-8 items-start">
       <div class="md:col-span-3">
         <h2 class="text-2xl md:text-3xl font-bold">Cuéntame de tu marca</h2>
-        <p class="text-ink/80 mt-2">En 60 segundos te doy el siguiente paso. Respuesta el mismo día.</p>
+        <p class="text-ink/80 mt-2">En 60 segundos te digo el siguiente paso. Respondo hoy.</p>
         <form id="contactForm" class="mt-6 space-y-4" action="https://formspree.io/f/your-id" method="POST">
           <div class="grid md:grid-cols-2 gap-4">
             <div>
@@ -506,11 +463,8 @@
       <aside class="md:col-span-2">
         <div class="rounded-2xl border border-ink/10 bg-white p-6 shadow-soft">
           <p class="text-sm text-ink/60">¿Prefieres DM?</p>
-          <a href="https://www.instagram.com/tegustaelcopy/" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 text-ink underline decoration-brand-400 decoration-2 underline-offset-4 hover:text-ink/80">
-            Escríbeme por Instagram
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg>
-          </a>
-          <p class="mt-3 text-sm text-ink/70">Respondo rápido y con un paso a paso accionable.</p>
+          <a href="https://www.instagram.com/tegustaelcopy/" target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 text-ink underline decoration-brand-400 decoration-2 underline-offset-4 hover:text-ink/80">Escríbeme por Instagram<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="M13.172 7l-1.414 1.414L14.343 11H5v2h9.343l-2.585 2.586L13.172 17 19 11.999 13.172 7z"/></svg></a>
+          <p class="mt-3 text-sm text-ink/70">Respondo con un paso a paso accionable.</p>
         </div>
       </aside>
     </div>
@@ -532,7 +486,7 @@
     // Envío con feedback
     const form = document.getElementById('contactForm');
     const msg = document.getElementById('formMsg');
-    form.addEventListener('submit', async (e) => {
+    form?.addEventListener('submit', async (e) => {
       e.preventDefault();
       msg.classList.remove('hidden');
       msg.textContent = 'Enviando…';
@@ -558,3 +512,4 @@
   </script>
 </body>
 </html>
+
